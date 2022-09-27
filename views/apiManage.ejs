@@ -13,15 +13,16 @@
             <!-- ejs for loop for each game/file/collection as select options -->
         </select>
     </form>
-    <form action="/addGame" method="POST">
-
+    
+    <form action="/addFact" method="POST">
+        <!-- game input will be the same as selected above, or last inputted -->
+        <input type="text" placeholder="Game">
+        <input type="text" placeholder="Add a fact">
+        <button type="submit">Submit</button>
     </form>
-    <form action="/addFact">
-        <input type="text" placeholder="fact">
-    </form>
 
-    <div>
+    <ul>
         <!-- ejs loop for selected game's facts -->
-    </div>
+    </ul>
 </body>
 </html>
