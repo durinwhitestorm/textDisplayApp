@@ -1,20 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const todosController = require('../controllers/todos') 
+const apiController = require('../controllers/apiManage') 
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
-router.get('/', ensureAuth, todosController.getTodos)
+router.get('/', ensureAuth, apiController.getGames)
 
-router.post('/createTodo', todosController.createTodo)
+router.get('/', ensureAuth, apiController.getFacts)
 
-router.put('/markComplete', todosController.markComplete)
+router.post('/createFact', apiController.createFacts)
 
-router.put('/markIncomplete', todosController.markIncomplete)
-
-router.delete('/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteFact', apiController.deleteFact)
 
 module.exports = router
-
-
-
-
