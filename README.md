@@ -1,44 +1,55 @@
-# Introduction
+# Text Display App
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+An application to display text on a screen with various options.
 
----
+## Description
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+Primarily built for livestreamers wanting to add a scrolling text field onto their screen. This application allows user to log in and access a set of documents with their saved information. Currently there is the option to create a list of documents with a subject and attached text field. The application groups the same subjects together and displays the appropriate text when called upon. There are options to customize and alter any text that is displayed to a seperate screen. 
 
----
+<!-- ## Getting Started
 
-# Objectives
+### Dependencies
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
 
----
+### Installing
 
-# Who is this for? 
+* How/where to download your program
+* Any modifications needed to be made to files/folders
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+### Executing program
 
----
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
 
-# Packages/Dependencies used 
+## Help
 
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
 
----
+## Authors
 
-# Install all the dependencies or node packages used for development via Terminal
+Contributors names and contact info
 
-`npm install` 
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
 
----
+## Version History
 
-# Things to add
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
 
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
+## License
 
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
+## Acknowledgments -->
