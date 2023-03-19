@@ -8,15 +8,23 @@
 </head>
 <body>
     <h1>Manage Data Files</h1>
-    <form action="/game">
-        <select>
-            <!-- ejs for loop for each game/file/collection as select options -->
-        </select>
-    </form>
+    <section class="gameSection">
+        <ul class='gamesList'>
+            <% for(var i = 0; i < gameArray.length; i++){ %>
+                <li class="game"> <%= gameArray[i] %> </li>
+            <% } %>
+        </ul>
+
+        <span>Selected Game:</span>
+
+        <form action="/addGame">
+            <input type="text" placeholder="Add Game">
+            <button type="submit">Add</button>
+        </form>
+    </section>
     
     <form action="/addFact" method="POST">
-        <!-- game input will be the same as selected above, or last inputted -->
-        <input type="text" placeholder="Game">
+        <!-- game input will be the same as selected above -->
         <input type="text" placeholder="Add a fact">
         <button type="submit">Submit</button>
     </form>
