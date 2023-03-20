@@ -21,6 +21,8 @@
             <input type="text" placeholder="Add Game">
             <button type="submit">Add</button>
         </form>
+
+        <a href="/settings">To Display</a>
     </section>
     
     <form action="/addFact" method="POST">
@@ -30,7 +32,14 @@
     </form>
 
     <ul>
-        <!-- ejs loop for selected game's facts -->
+        <% if(locals.factArray){ %>
+            <% for(var i = 0; i < factArray.length; i++){ %>
+                <li class="fact"> 
+                    <span> <%= factArray[i] %> </span> 
+                    <span class="deleteFact">X</span>
+                </li>
+            <% } %>
+        <% } %>
     </ul>
 </body>
 </html>
