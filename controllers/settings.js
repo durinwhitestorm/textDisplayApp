@@ -1,20 +1,20 @@
 const Facts = require('../models/FunFacts')
 
 module.exports = {
-    getGames: async (req,res)=>{
+    getInfo: async (req,res)=>{
         console.log(req.user)
         try{
-            const gameTitle = await Facts.find({userId:req.user.id, game:req.game})
-            res.render('apiManage.ejs', {game: gameTitle})
+            const games = await Facts.find({userId:req.user.id})
+            // const facts = await Facts.find({userId:req.user.id, game:req.game, fact:req.fact})
+            res.render('settings.ejs', {game: games})
         }catch(err){
             console.log(err)
         }
     },
-    getFacts: async (req,res)=>{
+    chooseGame: async (req,res)=>{
         console.log(req.user)
         try{
-            const facts = await Facts.find({userId:req.user.id, game:req.game, fact:req.fact})
-            res.render('apiManage.ejs', {fact: facts})
+
         }catch(err){
             console.log(err)
         }
@@ -23,7 +23,7 @@ module.exports = {
         try{
             await Todo.create({game: req.body.game, fact:req.body.fact, userId: req.user.id})
             console.log('Fact has been added')
-            res.redirect('/apiManage')
+            res.redirect('/settings')
         }catch(err){
             console.log(err)
         }
