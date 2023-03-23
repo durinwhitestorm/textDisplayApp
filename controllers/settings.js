@@ -6,7 +6,7 @@ module.exports = {
         try{
             const games = await Facts.find({userId:req.user.id})
             // const facts = await Facts.find({userId:req.user.id, game:req.game, fact:req.fact})
-            res.render('settings.ejs', {game: games})
+            res.render('manage.ejs', {gameArray: games})
         }catch(err){
             console.log(err)
         }
